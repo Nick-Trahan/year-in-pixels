@@ -395,6 +395,44 @@ template {
   cursor: pointer;
 }
 
+.msgBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 242px;
+  background: #eee;
+}
+
+#question {
+  padding-left: 20px;
+
+  text-align: center;
+}
+
+.msgBox p {
+  line-height: 1.5;
+  padding: 10px 20px;
+  color: #333;
+  padding-left: 82px;
+  background-position: 25px center;
+  background-repeat: no-repeat;
+}
+
+.answer {
+  cursor: pointer;
+}
+
+.msgBox button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
 #one {
   grid-row: 2;
 }
