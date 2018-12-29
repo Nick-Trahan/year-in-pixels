@@ -363,12 +363,67 @@ template {
   text-align: center;
 }
 
-#grid-container {
+#main-container {
   display: grid;
-  grid-template-rows: repeat(32, 25px);
-  grid-template-columns: repeat(13, 25px);
 
-  margin: 0 auto;
+  grid-template-areas:
+  "n, a, a, a, a, a, a, a, a, a, a, a, a"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+}
+
+#month-label-container {
+  display: flex;
+
+  grid-area: a;
+
+  height: max-content;
+}
+
+#date-label-container {
+  display: flex;
+  flex-direction: column;
+
+  grid-area: b;
+
+  width: max-content;
+}
+
+#button-container {
+  display: grid;
+  grid-template-rows: repeat(31, 25px);
+  grid-template-columns: repeat(12, 25px);
+
+  grid-area: c;
   
   /*Creates the look of a 1px solid border around each block in the grid*/
   grid-gap: 1px;
@@ -389,6 +444,10 @@ template {
 .color-box,
 .empty-box {
   background-color: white;
+}
+
+.month-box {
+  width: 25px;
 }
 
 .color-box {

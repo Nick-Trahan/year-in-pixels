@@ -8,7 +8,7 @@ let myFunction = function() {
 for (let i = 0; i < allColorBoxes.length; i++) {
   let dateBox = allColorBoxes[i];
   
-  dateBox.addEventListener('click', myFunction)
+
   dateBox.addEventListener('click', promptUser);
 }
 
