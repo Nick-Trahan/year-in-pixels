@@ -359,63 +359,52 @@ template {
 /* Begin custom CSS
    ========================================================================== */
 
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
 #title {
   text-align: center;
 }
 
+h2 {
+  font-size: 1.45em;
+}
+
 #main-container {
   display: grid;
+  grid-template-rows: 30px 1fr 30px;
+  grid-template-columns: 30px 320px 30px;
 
-  grid-template-areas:
-  "n, a, a, a, a, a, a, a, a, a, a, a, a"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
-  "b, c, c, c, c, c, c, c, c, c, c, c, c"
+  width: max-content;
+  
+  margin: 0 auto;
 }
 
 #month-label-container {
   display: flex;
 
-  grid-area: a;
+  grid-row: 1;
+  grid-column: 2;
 
   height: max-content;
+
+  margin: auto 0;
+
+  justify-content: space-evenly;
 }
 
 #date-label-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
-  grid-area: b;
+  grid-row: 2;
+  grid-column: 1;
 
   width: max-content;
+  margin: 0 auto;
 }
 
 #button-container {
@@ -423,7 +412,9 @@ template {
   grid-template-rows: repeat(31, 25px);
   grid-template-columns: repeat(12, 25px);
 
-  grid-area: c;
+  grid-column: 2;
+
+  margin: 0 auto;
   
   /*Creates the look of a 1px solid border around each block in the grid*/
   grid-gap: 1px;
@@ -435,8 +426,7 @@ template {
 .month-label,
 .date-label {
   margin: 0;
-  
-  text-align: center;
+  width: max-content;
 }
 
 .month-box,
@@ -444,10 +434,6 @@ template {
 .color-box,
 .empty-box {
   background-color: white;
-}
-
-.month-box {
-  width: 25px;
 }
 
 .color-box {
@@ -490,128 +476,4 @@ template {
   right: 0;
   font-size: 1.1rem;
   color: #aaa;
-}
-
-#one {
-  grid-row: 2;
-}
-
-#two {
-  grid-row: 3;
-}
-
-#three {
-  grid-row: 4;
-}
-
-#four {
-  grid-row: 5;
-}
-
-#five {
-  grid-row: 6;
-}
-
-#six {
-  grid-row: 7;
-}
-
-#seven {
-  grid-row: 8;
-}
-
-#eight {
-  grid-row: 9;
-}
-
-#nine {
-  grid-row: 10;
-}
-
-#ten {
-  grid-row: 11;
-}
-
-#eleven {
-  grid-row: 12;
-}
-
-#twelve {
-  grid-row: 13;
-}
-
-#thirteen {
-  grid-row: 14;
-}
-
-#fourteen {
-  grid-row: 15;
-}
-
-#fifteen {
-  grid-row: 16;
-}
-
-#sixteen {
-  grid-row: 17;
-}
-
-#seventeen {
-  grid-row: 18;
-}
-
-#eightteen {
-  grid-row: 19;
-}
-
-#nineteen {
-  grid-row: 20;
-}
-
-#twenty {
-  grid-row: 21;
-}
-
-#twentyone {
-  grid-row: 22;
-}
-
-#twentytwo {
-  grid-row: 23;
-}
-
-#twentythree {
-  grid-row: 24;
-}
-
-#twentyfour {
-  grid-row: 25;
-}
-
-#twentyfive {
-  grid-row: 26;
-}
-
-#twentysix {
-  grid-row: 27;
-}
-
-#twentyseven {
-  grid-row: 28;
-}
-
-#twentyeight {
-  grid-row: 29;
-}
-
-#twentynine {
-  grid-row: 30;
-}
-
-#thirty {
-  grid-row: 31;
-}
-
-#thirtyone {
-  grid-row: 32;
 }
