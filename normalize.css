@@ -384,10 +384,15 @@ template {
   text-align: center;
 }
 
-.color-box,
 .month-box,
-.date-box {
+.date-box,
+.color-box,
+.empty-box {
   background-color: white;
+}
+
+.color-box {
+  cursor: pointer;
 }
 
 #one {
