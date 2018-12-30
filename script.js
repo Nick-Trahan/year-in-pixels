@@ -4,7 +4,6 @@ colorBoxContainer.addEventListener('click', promptUser);
 
 function promptUser(event) {
   let clickedBox = event.target;
-  console.log(clickedBox.id);
 
   if (clickedBox.id === 'button-container') {
     console.log('oops!');
