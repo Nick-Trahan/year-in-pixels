@@ -1,18 +1,11 @@
-let allColorBoxes = document.querySelectorAll('.color-box');
+const colorBoxContainer = document.querySelector('#button-container');
 
-let myFunction = function() {
-  let attribute = this.getAttribute('id');
-  console.log(attribute);
-};
+colorBoxContainer.addEventListener('click', promptUser);
 
-for (let i = 0; i < allColorBoxes.length; i++) {
-  let dateBox = allColorBoxes[i];
-  
+function promptUser(event) {
+  let clickedBox = event.target;
+  console.log(clickedBox.id);
 
-  dateBox.addEventListener('click', promptUser);
-}
-
-function promptUser() {
   let body = document.querySelector('body');
 
   let panel = document.createElement('div');
