@@ -25,31 +25,37 @@ function promptUser(event) {
     let ansFantastic = document.createElement('p');
     // let btnFantastic = document.createElement('button');
     ansFantastic.setAttribute('class', 'answer');
+    ansFantastic.setAttribute('id', 'p-fantastic');
     ansFantastic.textContent = 'Fantastic, amazing day! :D';
     panel.appendChild(ansFantastic);
   
     let ansSad = document.createElement('p');
     ansSad.setAttribute('class', 'answer');
+    ansSad .setAttribute('id', 'p-sad');
     ansSad.textContent = 'Sad, gloomy day :\'(';
     panel.appendChild(ansSad);
   
     let ansNervous = document.createElement('p');
     ansNervous.setAttribute('class', 'answer');
+    ansNervous .setAttribute('id', 'p-nervous');
     ansNervous.textContent = 'Nervous :/';
     panel.appendChild(ansNervous);
   
     let ansNormal = document.createElement('p');
     ansNormal.setAttribute('class', 'answer');
+    ansNormal .setAttribute('id', 'p-normal');
     ansNormal.textContent = 'Normal :|';
     panel.appendChild(ansNormal);
   
     let ansGreat = document.createElement('p');
     ansGreat.setAttribute('class', 'answer');
+    ansGreat .setAttribute('id', 'p-great');
     ansGreat.textContent = 'Great Day :)';
     panel.appendChild(ansGreat);
   
     let ansMad = document.createElement('p');
     ansMad.setAttribute('class', 'answer');
+    ansMad .setAttribute('id', 'p-mad');
     ansMad.textContent = 'Mad, frustrating day >:(';
     panel.appendChild(ansMad);
   
