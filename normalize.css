@@ -465,12 +465,12 @@ h2 {
   text-align: center;
 }
 
-.answer {
+.mood-answer {
   cursor: pointer;
   color: #fff;
 }
 
-.answer:active {
+.mood-answer:active {
   transform: scale(0.95);
   transition: 0.05s;
 }
