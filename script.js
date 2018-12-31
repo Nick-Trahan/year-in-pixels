@@ -1,12 +1,19 @@
 const colorBoxContainer = document.querySelector('#button-container');
 
+colorBoxContainer.addEventListener('click', dateChosen);
 colorBoxContainer.addEventListener('click', promptUser);
 
-function promptUser(event) {
-  let clickedBox = event.target;
+function dateChosen(event) {
+  const clickedBox = event.target;
+  return clickedBox;
+}
 
-  switch (clickedBox.className) {
+function promptUser(validBox) {
+  validBox = dateChosen(event);
+
+  switch (validBox.className) {
     case 'color-box':
+      colorBoxContainer.removeEventListener('click', dateChosen);
       colorBoxContainer.removeEventListener('click', promptUser);
   
       let body = document.querySelector('body');
@@ -63,8 +70,10 @@ function promptUser(event) {
       panel.addEventListener('click', saveMoodChoice);
   
       closeBtn.onclick = function() {
-        panel.parentNode.removeChild(panel);
         panel.removeEventListener('click', saveMoodChoice);
+        panel.parentNode.removeChild(panel);
+
+        colorBoxContainer.addEventListener('click', dateChosen);
         colorBoxContainer.addEventListener('click', promptUser);
       }
       break;
@@ -76,6 +85,6 @@ function promptUser(event) {
 }
 
 function saveMoodChoice(event) {
-  let userMood = event.target;
+  const userMood = event.target;
   console.log(userMood.id);
 }
